@@ -1,0 +1,10 @@
+services:
+  nginx-balancer:
+    image: nginx:1.26
+    container_name: nginx-balancer
+      
+    volumes:
+      - ./nginx-etc-balancer:/etc/nginx
+      - ./nginx-html:/usr/share/nginx/html
+
+    network_mode: host
